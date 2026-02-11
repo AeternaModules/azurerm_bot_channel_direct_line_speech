@@ -1,6 +1,6 @@
-variable "bot_channel_direct_line_speechs" {
+variable "bot_channel_direct_line_speeches" {
   description = <<EOT
-Map of bot_channel_direct_line_speechs, attributes below
+Map of bot_channel_direct_line_speeches, attributes below
 Required:
     - bot_name
     - cognitive_service_access_key
