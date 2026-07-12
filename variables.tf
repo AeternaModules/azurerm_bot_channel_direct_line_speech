@@ -8,20 +8,24 @@ Required:
 Optional:
     - cognitive_account_id
     - cognitive_service_access_key
+    - cognitive_service_access_key_key_vault_id (alternative to cognitive_service_access_key - read from Key Vault instead)
+    - cognitive_service_access_key_key_vault_secret_name (alternative to cognitive_service_access_key - read from Key Vault instead)
     - cognitive_service_location
     - custom_speech_model_id
     - custom_voice_deployment_id
 EOT
 
   type = map(object({
-    bot_name                     = string
-    location                     = string
-    resource_group_name          = string
-    cognitive_account_id         = optional(string)
-    cognitive_service_access_key = optional(string)
-    cognitive_service_location   = optional(string)
-    custom_speech_model_id       = optional(string)
-    custom_voice_deployment_id   = optional(string)
+    bot_name                                           = string
+    location                                           = string
+    resource_group_name                                = string
+    cognitive_account_id                               = optional(string)
+    cognitive_service_access_key                       = optional(string)
+    cognitive_service_access_key_key_vault_id          = optional(string)
+    cognitive_service_access_key_key_vault_secret_name = optional(string)
+    cognitive_service_location                         = optional(string)
+    custom_speech_model_id                             = optional(string)
+    custom_voice_deployment_id                         = optional(string)
   }))
   validation {
     condition = alltrue([
